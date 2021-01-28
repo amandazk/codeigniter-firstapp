@@ -21,7 +21,7 @@ class News extends Controller
         echo view('templates/footer', $data);
     }
 
-    public function view($slug = null)
+    public function view($slug = NULL)
     // The model is using this slug to identify the news item to be returned
     {
         $model = new NewsModel();
@@ -35,7 +35,7 @@ class News extends Controller
         $data['title'] = $data['news']['title'];
 
         echo view('templates/header', $data);
-        echo view('news/overview', $data);
+        echo view('news/view', $data);
         echo view('templates/footer', $data);
     }
 }
